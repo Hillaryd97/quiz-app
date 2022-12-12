@@ -87,7 +87,7 @@ async function loadQuestion() {
 
           // _result.innerHTML += `<p class="p-4">Your score is ${askedCount}.</p>`;
           // _playAgain.style.display = "block";
-          checkBtn.style.display = "none";
+          // checkBtn.style.display = "none";
         } else {
           setTimeout(function () {
             loadQuestion();
