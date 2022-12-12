@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // loadQuestion();
 
  
-  correctScore.textContent = _correctScore;
+  // correctScore.textContent = _correctScore;
 });
 
 loadQuestion().catch((error) => {
@@ -48,11 +48,6 @@ async function loadQuestion() {
     // Display question
     questionBox.innerHTML = `
     <div
-      class="bg-almostWhite p-2 rounded-full -mb-2 border-2 border-yellow-300 -m-5"
-    >
-    <span id="correctScore">${askedCount}</span>/<span id="totalScore">10</span>
-    </div>
-    <div
       class="bg-green-600 items-start font-bold px-2 py-1 text-white"
     >
       ${category}
@@ -82,16 +77,16 @@ async function loadQuestion() {
         _result.innerHTML = `   <p class="text-red-600 text-md my-4"><strong> Wrong Answer! <span class="text-2xl">&times;</span></strong></p>`;
 
         askedCount++;
-        console.log(_correctScore);
-        console.log(askedCount);
+        // console.log(_correctScore);
+        // console.log(askedCount);
         correctScore = _correctScore;
-        if (askedCount >= 10) {
+        if (askedCount > 1) {
           setTimeout(function () {
             console.log("");
           }, 5000);
 
-          _result.innerHTML += `<p class="p-4">Your score is ${askedCount}.</p>`;
-          _playAgain.style.display = "block";
+          // _result.innerHTML += `<p class="p-4">Your score is ${askedCount}.</p>`;
+          // _playAgain.style.display = "block";
           checkBtn.style.display = "none";
         } else {
           setTimeout(function () {
